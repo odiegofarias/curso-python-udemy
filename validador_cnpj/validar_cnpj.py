@@ -3,7 +3,7 @@ from remover_caracter import remover_caracteres
 
 peso1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
 peso2 = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
-cnpj_referencia = remover_caracteres('03.361.252/0001-34')
+cnpj_referencia = remover_caracteres(input('Informe o CNPJ: '))
 
 
 #  Para cada item da lista, transforme em inteiro
@@ -42,15 +42,12 @@ if formula2 > 9:
     cnpj.append(0)
 else:
     cnpj.append(formula2)
-cnpj_referencia = list(cnpj_referencia)
-print(cnpj)
 cnpj_referencia = list(map(int, cnpj_referencia))
-print(cnpj_referencia)
 
 if cnpj_referencia == cnpj:
     print('CNPJ Válido.')
 else:
-    print('CNPJ Inválido.')
+    print('O CNPJ digitado é inválido.')
 
 
 
